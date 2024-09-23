@@ -123,18 +123,101 @@ button {
     margin: 40px;
 }
 .category_btn {
-    border: 1px solid #bdbdbd;
+    border: 1px solid var(--color-dark-white);
     border-radius: 5px;
-    font-size: 18px;
+    font-size: var(--font-regular);
     padding: 8px 48px;
     margin-bottom: 5px;
 }
 .category_btn.selected,
 .category_btn:hover {
-    background-color: skyblue;
+    background-color: var(--color-pink);
+    color: var(--color-white);
 }
 
+.category_btn.selected .category_count,
+.category_btn:hover .category_count {
+    opacity: 1;
+    top: 0;
+}
 
 .category_count {
     background-color: #feb546;
+    border-radius: 50%;
+    color: var(--color-white);
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    display: inline-block;
+    position: relative;
+    top: -20px;
+    left: 4px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.work_projects {
+    /* background-color: skyblue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 1;
+    transition: 0.3s;
+}
+.work_projects.anim-out {
+    opacity: 0;
+    transform: sclae(0.96) translateY(40px);
+}
+
+.project {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 280px;
+    height: 250px;
+    margin: 2px;
+    background-color: var(--color-light-white);
+}
+.project.invisible {
+    display: none;
+}
+.project_img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.project_description {
+    position: absolute;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+.project:hover .project_description{
+    transform: translateY(0px);
+    opacity: 0.8;
+}
+.project_description h3 {
+    color: var(--color-orange);
+}
+.project_description span {
+    color: var(--color-white);
+}
+.project_description h3::after{
+    content: '';
+    display: block;
+    position: relative;
+    left: 50%;
+    width: 50px;
+    height: 2px;
+    transform: translateX(-30%);
+    margin-left: -12px;
+    margin-top: 8px;
+    background-color: var(--color-dark-white);
 }
