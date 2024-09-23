@@ -1,3 +1,28 @@
+:root {
+    /* Color */
+    --color-white: #ffffff;
+    --color-light-white: #eee;
+    --color-dark-white: #bdbdbd;
+    --color-pink: #fe918d;
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #616161;
+    --color-light-grey: #7c7979;
+    --color-blue: #73aace;
+    --color-dark-blue: #55a1d3;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000;
+    /* Font Size */
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px;
+    /* Font Weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+}
 body {
     margin: 0;
     font-family: "Noto Sans KR", sans-serif;
@@ -9,7 +34,7 @@ section {
     text-align: center;
 }
 section:nth-child(odd) {
-    background-color: skyblue;
+    /*background-color: skyblue;*/
 }
 .wrapper {
     padding-top: 88px;
@@ -94,3 +119,22 @@ button {
     opacity: 1;
 }
 
+.work_categories {
+    margin: 40px;
+}
+.category_btn {
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 8px 48px;
+    margin-bottom: 5px;
+}
+.category_btn.selected,
+.category_btn:hover {
+    background-color: skyblue;
+}
+
+
+.category_count {
+    background-color: #feb546;
+}
